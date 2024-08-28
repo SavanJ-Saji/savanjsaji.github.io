@@ -1,0 +1,32 @@
+# Site settings
+title: Savan J Saji Reactfolio
+description: "A minimal, responsive portfolio theme for Jekyll based on Primer, designed and developed by Savan J Saji."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.savanjsaji.me" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-primer
+
+# Exclude unnecessary files and directories
+exclude:
+  - node_modules
+  - vendor/bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Other settings
+plugins:
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-coffeescript
+  - jekyll-commonmark-ghpages
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  

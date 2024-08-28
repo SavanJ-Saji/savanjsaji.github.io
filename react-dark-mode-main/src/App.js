@@ -8,4 +8,4 @@ export const Toggle = ({ isChecked, handleChange }) => {
       <span className="slider round"></span>
     </label>
   );
-};
+};z
