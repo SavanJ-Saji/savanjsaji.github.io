@@ -1,14 +1,14 @@
 # Reactfolio V1.2 👩🏽‍🚀
 
-Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professiona and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
+Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professional and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
 
 <center>
-<img src="https://i.imgur.com/ZWPO61A.jpeg" alt="Reactfolio" />
+<img src="https://github.com/user-attachments/assets/ceb1da22-fa4e-4a7f-b82d-da3b08a31e07" alt="Reactfolio" />
 </center>
 
-Live demo here: <a href="https://reactfolio.tharindu.dev/" target="_blank">reactfolio.tharindu.dev</a>
+Live demo here: <a href="https://reactfolio.savan.dev/" target="_blank">reactfolio.savan.dev</a>
 <br/>
-Readme here: <a href="https://tharindu.dev/portfolio/reactfolio/" target="_blank">tharindu.dev/portfolio/reactfolio/</a>
+Readme here: <a href="https://savan.dev/portfolio/reactfolio/" target="_blank">tsavan.dev/portfolio/reactfolio/</a>
 
 -   [Features](#-features)
 -   [Getting started](#-getting-started)
@@ -47,38 +47,38 @@ The page will reload if you make edits.
 
 ## 📁 Folder structure
 
--   `/public`: publicly accessible contents (ex: images, media).
+-   `/public`: publicly accessible content (ex: images, media).
 -   `/src`: all the components used in this project.
-    -   `/src/components/`: each reusable components of each pages.
+    -   `/src/components/`: each reusable component of each page.
     -   `/src/data`: configurations of the web app.
-    -   `/src/pages`: pages that include in the web app.
+    -   `/src/pages`: pages that are included in the web app.
 
 ## ⚙️ Configurations
 
-Since this is a public and open source project, you can make any changes to it. If you are a ReactJS developer you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
+Since this is a public and open-source project, you can make any changes to it. If you are a ReactJS developer you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
 
 Directory: `/src/data/`
 
 -   `user.js`
 
-    From this you can change the content of each page of the web application.
+    From this, you can change the content of each page of the web application.
 
 -   `articles.js`
 
-    From this you can add your articles to the web application.
+    From this, you can add your articles to the web application.
 
     Instructions:
 
-    -   Add new article
+    -   Add a new article
 
-        1. Create a new function starts with `article_`. For example you can add new function named `article_3`.
+        1. Create a new function starting with `article_`. For example, you can add a new function named `article_3`.
 
         2. Then add the data accordingly.
 
-            - Add `<React.Fragment>` tag and it's closing tags in body.
-            - In React there has no keyword `class`, so you should use `className` to define html classes.
+            - Add the `<React.Fragment>` tag and its closing tags in the body.
+            - In React there is no keyword `class`, so you should use `className` to define html classes.
 
-            ```js
+            ``` js
             function article_3() {
             	return {
             		date: "7 May 2023",
@@ -130,7 +130,7 @@ Directory: `/src/data/`
 
     Example:
 
-    ```js
+    ``` js
     const SEO = [
     	{
     		page: "home",
@@ -143,10 +143,10 @@ Directory: `/src/data/`
 
 -   `styles.css`
 
-    From this you can change the font colors and font families of the web application.
+    From this, you can change the font colours and font families of the web application.
 
     ```css
-    :root {
+    : root {
     	/* ------- colors ------- */
     	--primary-color: #27272a;
     	--secondary-color: #65656d;
@@ -166,7 +166,7 @@ Directory: `/src/data/`
 
 Add your Google Analytics 4 MEASUREMENT ID to `/src/data/tracking.js`.
 
-How to find the Google Analytics 4 MEASUREMENT ID ?
+How to find the Google Analytics 4 MEASUREMENT ID?
 
 [https://support.google.com/analytics/answer/9539598?hl=en](https://support.google.com/analytics/answer/9539598?hl=en)
 
@@ -202,10 +202,6 @@ If you are using Apache as your web server, you can insert this into your .htacc
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+  RewriteRule. /index.html [L]
 </IfModule>
 ```
-
-## 🌱 Contribution
-
-If you have any suggestions on what to improve in Reactfolio and would like to share them, feel free to leave an issue or fork project to implement your own ideas
