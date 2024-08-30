@@ -2,16 +2,20 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "src/index.js",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "framework": "static" 
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
-
 
  
