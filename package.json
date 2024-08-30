@@ -1,75 +1,71 @@
 {
-    "homepage": "https://savanjsaji.github.io/",
-    "name": "reactfolio",
-    "version": "1.1.0",
-    "description": "Personal portfolio template built using Reactjs",
-    "author": {
-        "name": "Savan J Saji",
-        "email": "savanjsaji72@gmail.com",
-        "url": "https://savanjsaji.me"
-    },
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.4.0",
-        "@fortawesome/free-brands-svg-icons": "^6.4.0",
-        "@fortawesome/free-regular-svg-icons": "^6.4.0",
-        "@fortawesome/free-solid-svg-icons": "^6.4.0",
-        "@fortawesome/react-fontawesome": "^0.2.0",
-        "@testing-library/jest-dom": "^5.16.5",
-        "@testing-library/react": "^13.4.0",
-        "@testing-library/user-event": "^13.5.0",
-        "@vercel/speed-insights": "^1.0.12",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-ga4": "^2.1.0",
-        "react-helmet": "^6.1.0",
-        "react-router-dom": "^6.11.1",
-        "react-scripts": "5.0.1",
-        "styled-components": "^5.3.10",
-        "web-vitals": "^2.1.4"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "vercel-build": "react-scripts build", 
-        "deploy": "gh-pages -d build"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "prettier": {
-        "useTabs": true,
-        "tabWidth": 4
-    },
-    "devDependencies": {
-        "gh-pages": "^6.1.1",
-        "react-scripts": "^5.0.1",
-        "styled-components": "^5.3.10",
-        "web-vitals": "^2.1.4"
-    },
-    "jest": {
-        "setupFiles": [
-            "<rootDir>/jest.setup.js"
-        ]
-    },
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.10",
-    "web-vitals": "^2.1.4"
+	"homepage": "https://savanjsaji.github.io/reactfolio",
+	"name": "reactfolio",
+	"version": "1.1.0",
+	"description": "Personal portfolio template built using Reactjs",
+	"author": {
+		"name": "Savan J Saji",
+		"email": "savanjsaji72@gmail.com",
+		"url": "https://savanjsaji.github.com/reactfolio"
+	},
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.4.0",
+		"@fortawesome/free-brands-svg-icons": "^6.4.0",
+		"@fortawesome/free-regular-svg-icons": "^6.4.0",
+		"@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-ga4": "^2.1.0",
+		"react-helmet": "^6.1.0",
+		"react-router-dom": "^6.11.1",
+		"styled-components": "^5.3.11",
+		"use-local-storage": "^3.0.0",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"vercel-build": "react-scripts build",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -b gh-pages -d build"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"prettier": {
+		"useTabs": true,
+		"tabWidth": 4
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1",
+		"react-scripts": "^5.0.1"
+	},
+	"jest": {
+		"setupFiles": [
+			"<rootDir>/jest.setup.js"
+		]
+	}
 }
