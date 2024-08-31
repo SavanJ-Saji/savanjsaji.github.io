@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="https://media.licdn.com/dms/image/v2/D5603AQES9tTOqxT_1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1679919873608?e=1729728000&v=beta&t=ibft9Lv02MY6EowTraUWApM_Hs93GCtU-kXu8J2OsqU" />
+		<link rel="icon" href="https://media.licdn.com/dms/image/v2/D5603AQES9tTOqxT_1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1679919873608?e=1729728000&v=beta&t=ibft9Lv0" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Web site created using create-react-app" />
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -11,13 +11,6 @@
 			// Single Page Apps for GitHub Pages
 			// MIT License
 			// https://github.com/rafgraph/spa-github-pages
-			// This script checks to see if a redirect is present in the query string,
-			// converts it back into the correct url and adds it to the
-			// browser's history using window.history.replaceState(...),
-			// which won't cause the browser to attempt to load the new url.
-			// When the single page app is loaded further down in this file,
-			// the correct url will be waiting in the browser's history for
-			// the single page app to route accordingly.
 			(function(l) {
 			  if (l.search[1] === '/' ) {
 				var decoded = l.search.slice(1).split('&').map(function(s) { 
@@ -28,17 +21,13 @@
 				);
 			  }
 			}(window.location))
-		  </script>
+		</script>
 		<title>Savan-Reactfolio</title>
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
-		<script>
-			window.onload = function() {
-				const root = document.getElementById('root');
-				root.innerHTML = '<h1>Welcome to Savan-Reactfolio</h1>';
-			};
-		</script>
+		<!-- The core React script -->
+		<script src="%PUBLIC_URL%/static/js/bundle.js"></script>
 	</body>
 </html>
