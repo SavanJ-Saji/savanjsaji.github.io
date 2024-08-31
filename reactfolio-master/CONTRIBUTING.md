@@ -1,12 +1,12 @@
 Contributing Guidelines
 
-Thank you for your interest in contributing to our project! We welcome contributions from everyone. By participating in this project, you agree to abide by the following guidelines:
+We appreciate your interest in contributing to our project!  To ensure a positive and productive experience for everyone, please review the following guidelines: 
 
 Code of Conduct:
-Please review and adhere to our Code of Conduct, which establishes a welcoming and inclusive environment for all contributors. 
+Let's make sure we all feel welcome and included by following our Code of Conduct. 
 
 Types of Contributions:
-We welcome different types of contributions, including but not limited to:
+We welcome different variety of contributions, including but not limited to:
 
 - Bug fixes
 - New features or enhancements
