@@ -76,6 +76,4 @@ const INFO = {
 
 export default INFO;
 
-};
 
-export default INFO;
