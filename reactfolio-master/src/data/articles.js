@@ -41,6 +41,20 @@ function article_1() {
 
 function article_2() {
 	return {
+	    title: "Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4",
+	    author: "Savan J Saji",
+	    link: "https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4",
+	    body: (
+		   <React.Fragment>
+			    <h1>Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4</h1>
+			    <p>Read the full article <a href="https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4">here</a>.</p>
+		   </React.Fragment>
+		),
+	};
+}
+
+function article_3() {
+	return {
 		date: "7 May 2023",
 		title: "Artificial Intelligence in Healthcare",
 		description:
@@ -59,6 +73,10 @@ function article_2() {
 		),
 	};
 }
+
+const myArticles = [article_1, article_2, article_3];
+
+export default myArticles;
 
 const myArticles = [article_1, article_2];
 
