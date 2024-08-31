@@ -77,7 +77,3 @@ function article_3() {
 const myArticles = [article_1, article_2, article_3];
 
 export default myArticles;
-
-const myArticles = [article_1, article_2];
-
-export default myArticles;
