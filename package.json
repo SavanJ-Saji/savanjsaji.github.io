@@ -1,5 +1,6 @@
 {
 	"homepage": "https://savanjsaji.github.io/reactfolio", 
+},
 	"name": "reactfolio",
 	"version": "1.1.0",
 	"description": "This is a personal portfolio website built using the React.JS library. ",
