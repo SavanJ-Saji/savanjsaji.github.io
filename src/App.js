@@ -1,38 +1,27 @@
-import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import ReactGA from "react-ga4";
-
-import Homepage from "./pages/homepage";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Articles from "./pages/articles";
-import ReadArticle from "./pages/readArticle";
-import Contact from "./pages/contact";
-import Notfound from "./pages/404";
-
-import { TRACKING_ID } from "./data/tracking";
-import "./app.css";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './pages/homepage';
+import AboutPage from './pages/about';
+import ProjectsPage from './pages/projects';
+import ArticlesPage from './pages/articles';
+import ReadArticlePage from './pages/readArticle';
+import ContactPage from './pages/contact';
+import NotFoundPage from './pages/404';
 
 function App() {
-	useEffect(() => {
-		if (TRACKING_ID !== "") {
-			ReactGA.initialize(TRACKING_ID);
-		}
-	}, []);
-
-	return (
-		<div className="App">
-			<Routes>
-				<Route path="/" element={<Homepage />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/articles" element={<Articles />} />
-				<Route path="/article/:slug" element={<ReadArticle />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="*" element={<Notfound />} />
-			</Routes>
-		</div>
-	);
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/projects" component={ProjectsPage} />
+        <Route path="/articles" component={ArticlesPage} />
+        <Route path="/article/:id" component={ReadArticlePage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
