@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/homepage';
 import AboutPage from './pages/about';
 import ProjectsPage from './pages/projects';
@@ -11,7 +11,7 @@ import NotFoundPage from './pages/404';
 function App() {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/projects" component={ProjectsPage} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/article/:id" component={ReadArticlePage} />
         <Route path="/contact" component={ContactPage} />
         <Route component={NotFoundPage} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
