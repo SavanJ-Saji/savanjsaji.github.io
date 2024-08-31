@@ -8,7 +8,7 @@ Reactfolio is a modern and customizable personal portfolio web template built us
 
 Live demo here: <a href="https://reactfolio.savan.dev/" target="_blank">reactfolio.savan.dev</a>
 <br/>
-Readme here: <a href="https://savan.dev/portfolio/reactfolio/" target="_blank">tsavan.dev/portfolio/reactfolio/</a>
+Readme here: <a href="https://savan.dev/portfolio/reactfolio/" target="_blank">savan.dev/portfolio/reactfolio/</a>
 
 -   [Features](#-features)
 -   [Getting started](#-getting-started)
