@@ -6,7 +6,7 @@ const INFO = {
 		logo: "../logo.png",
 	},
 	socials: {
-		X: "https://x.com/Savan_JSaji",
+		X: "https://X.com/",
 		github: "https://github.com/SavanJ-Saji",
 		linkedin: "https://www.linkedin.com/in/savan-j-saji/",
 		instagram: "https://www.instagram.com/_savan._.j_saji_/",
@@ -35,7 +35,7 @@ const INFO = {
 			title: "Random Quote Generator Using HTML, CSS & JavaScript",
 			description:
 				"Get a fresh perspective with a new quote every time you click the button.",
-			logo: "https://static.wixstatic.com/media/cbed17_d034840f87f34e93ba463891d40581af~mv2.png/v1/fill/w_583,h_305,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_d034840f87f34e93ba463891d40581af~mv2.png",
+			logo: "/https://static.wixstatic.com/media/cbed17_d034840f87f34e93ba463891d40581af~mv2.png/v1/fill/w_583,h_305,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_d034840f87f34e93ba463891d40581af~mv2.png",
 			linkText: "View Project",
 			link: "https://randomquotegeneratorfiles.on.drv.tw/www.C%2B%2BATMProject.com/quote.html",
 		},
@@ -43,7 +43,7 @@ const INFO = {
 			title: "Tic Tac Toe Game Using HTML,CSS And JavaScript",
 			description:
 				"Challenge your friends to a game of Tic Tac Toe.",
-			logo: "https://static.wixstatic.com/media/cbed17_e63f87e1267942989a7810780f549b1f~mv2.png/v1/fill/w_543,h_305,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_e63f87e1267942989a7810780f549b1f~mv2.png",
+			logo: "/https://static.wixstatic.com/media/cbed17_e63f87e1267942989a7810780f549b1f~mv2.png/v1/fill/w_543,h_305,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_e63f87e1267942989a7810780f549b1f~mv2.png",
 			linkText: "View Project",
 			link: "https://randomquotegeneratorfiles.on.drv.tw/www.tictactoe.com/Tictactoe.html",
 		},
@@ -51,7 +51,7 @@ const INFO = {
 			title: "JOKE GENERATOR USING HTML,CSS And Javascript",
 			description:
 				"Add some humour to your day with a new joke every time you click.",
-			logo: "https://static.wixstatic.com/media/cbed17_2979702d9de24230a96bb423868be328~mv2.png/v1/fill/w_520,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_2979702d9de24230a96bb423868be328~mv2.png",
+			logo: "/https://static.wixstatic.com/media/cbed17_2979702d9de24230a96bb423868be328~mv2.png/v1/fill/w_520,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_2979702d9de24230a96bb423868be328~mv2.png",
 			linkText: "View Project",
 			link: "https://randomquotegeneratorfiles.on.drv.tw/www.Joke.com/Joke.html",
 		},
@@ -59,7 +59,7 @@ const INFO = {
 			title: "Project 4",
 			description:
 				"Coming soon",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "/https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -67,7 +67,7 @@ const INFO = {
 			title: "Project 5",
 			description:
 				"On the way",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "/https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
@@ -75,5 +75,6 @@ const INFO = {
 };
 
 export default INFO;
+
 
 
