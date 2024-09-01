@@ -30,7 +30,6 @@ plugins:
   - jekyll-default-layout
   - jekyll-titles-from-headings-module
 # _config.yml
-exclude:
-  - node_modules
+
   
   
