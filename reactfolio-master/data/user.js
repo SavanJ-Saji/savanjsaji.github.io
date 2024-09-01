@@ -16,10 +16,10 @@ const INFO = {
 	homepage: {
 		title: "Turning Tech Dreams Into Reality",
 		description:
-			"I'm a skilled web developer passionate about building robust, secure applications. I thrive on tackling complex problems and continuously expanding my technical knowledge. My commitment to best practices and industry standards ensures high-quality code. I'm always eager to embrace new challenges and opportunities to enhance my skills. ",
+			"I'm an emerging web developer passionate about building robust, secure applications. I thrive on tackling complex problems and continuously expanding my technical knowledge. I aim to deliver quality code by carefully following best practices and standards. I’m always eager to embrace new challenges that push my boundaries & integrate my passion for the electronics realm besides coding. ",
 	},
 	about: {
-		title: "I’m Savan J Saji. Welcome to my Web Development Portfolio.",
+		title: "Hi, I'm Savan J Saji. This is my React portfolio.",
 		description:
 			"Hello! My name is Savan J Saji, and I am currently a third-year undergraduate at the College of Engineering Trivandrum, where I am pursuing a Bachelor of Technology in Applied Electronics & Instrumentation.\n\n" +
 			"I am constantly seeking new opportunities to learn and improve in the domains of web development, cyber security & embedded systems. In my leisure time, I enjoy staying up-to-date on advancements in the technology field.\n\n" +
@@ -72,10 +72,6 @@ const INFO = {
 			link: "https://github.com",
 		},
 	],
-};
-
-export default INFO;
-
 };
 
 export default INFO;
