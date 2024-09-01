@@ -1,28 +1,16 @@
 import React, { useContext, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-// import { ThemeProvider } from '@material-ui/core/styles';
-import Navbar from './components/common/navBar.jsx';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ArticlesPage from './pages/ArticlesPage';
-import ReadArticlePage from './pages/ReadArticlePage';
-import ContactPage from './pages/ContactPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/homepage';
+import AboutPage from './pages/about';
+import ProjectsPage from './pages/projects';
+import ArticlesPage from './pages/articles';
+import ReadArticlePage from './pages/readArticle';
+import ContactPage from './pages/contact';
 import NotFoundPage from './pages/404';
-import ThemeToggle from './components/Toggle';
-import { ThemeProvider as AppThemeProvider, ThemeContext } from './theme-provider';
+import Navbar from './components/common/navBar.jsx';
+import Toggle from './Toggle.js';
+import { ThemeProvider, ThemeContext } from './theme-provider';
 import './global.css'; // Import global CSS
-import styled from 'styled-components';
-
-const Button = styled.button`
-  background-color: ${(props) => props.theme.colors.primary};
-  color: white;
-`;
-
-function MainComponent() {
-  return <Button>Click Me</Button>;
-}
 
 const AppContent = () => {
   const { theme } = useContext(ThemeContext);
@@ -30,6 +18,11 @@ const AppContent = () => {
   useEffect(() => {
     document.body.style.backgroundColor = theme.background;
     document.body.style.color = theme.color;
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
   }, [theme]);
 
   return (
@@ -49,15 +42,15 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <AppThemeProvider>
+    <ThemeProvider>
       <Router>
         <Navbar />
-        <ThemeToggle />
+        <Toggle />
         <AppContent />
-        <MainComponent />
       </Router>
-    </AppThemeProvider>
+    </ThemeProvider>
   );
 };
 
 export default App;
+
