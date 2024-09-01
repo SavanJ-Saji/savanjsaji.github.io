@@ -15,7 +15,7 @@ const Works = () => {
 					<div className="works-body">
 						<div className="work">
 							<img
-								src="https://media.licdn.com/dms/image/v2/C560BAQFkd_MVvfJ8SA/company-logo_100_100/company-logo_100_100/0/1630669608362/investorcet_logo?e=1732752000&v=beta&t=R0mrjCtLyeYfw2XkRVHiYMxdOVJVIetDmSVWrJFdFfc"
+								src="./https://media.licdn.com/dms/image/v2/C560BAQFkd_MVvfJ8SA/company-logo_200_200/company-logo_200_200/0/1630669608362/investorcet_logo?e=1733356800&v=beta&t=CbSpmb__vvzUQIIlZzkW__3Wg1ieEYqqnmw2IFHxOk8"
 								alt="Investor CET"
 								className="work-image"
 							/>
@@ -25,22 +25,23 @@ const Works = () => {
 							</div>
 							<div className="work-duration">Feb 2024 - Present</div>
 						</div>
-					    <div className="work">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D560BAQGIlPRwI7g4iA/company-logo_200_200/company-logo_200_200/0/1696013280902?e=1732752000&v=beta&t=_XjhiSY0658A5ODNfphk-xre78vWTP05eJoQ7EWEDDM"
-                                alt="EETI Foundation"
-                                className="work-image"
-                            />
-                            <div className="work-title">EETI Foundation</div>
-                            <div className="work-subtitle">
-							Creative Lead
-                            </div>
-							<div className="work-duration">Sept 2023 - Aug 2024</div>
-                        </div>
 
 						<div className="work">
 							<img
-								src="https://media.licdn.com/dms/image/v2/C560BAQExO-V_fo3ggg/company-logo_200_200/company-logo_200_200/0/1630604969837/robo_cet_logo?e=1732752000&v=beta&t=dopoUS-cd87dx0pbLpLufTmbZ7zCCJWMXjXIdyviY2I"
+								src="./https://media.licdn.com/dms/image/v2/D560BAQGIlPRwI7g4iA/company-logo_200_200/company-logo_200_200/0/1696013280902?e=1733356800&v=beta&t=2gtEuIQLoheMZRqbX2mh-U_isPfSvOt76evdN4yVeFg"
+								alt="EETIF"
+								className="work-image"
+							/>
+							<div className="work-title">EETI Foundation</div>
+							<div className="work-subtitle">
+								Creative Lead
+							</div>
+							<div className="work-duration">Sept 2023 - Sept 2024</div>
+						</div>
+
+						<div className="work">
+							<img
+								src="./https://media.licdn.com/dms/image/v2/C560BAQExO-V_fo3ggg/company-logo_200_200/company-logo_200_200/0/1630604969837/robo_cet_logo?e=1733356800&v=beta&t=SAm968djxgefAHsstJIUg9ZEr1Hgd8ErUR-A-VhTK3Q"
 								alt="RoboCET"
 								className="work-image"
 							/>
@@ -48,7 +49,20 @@ const Works = () => {
 							<div className="work-subtitle">
 								Designer
 							</div>
-							<div className="work-duration">Aug 2023 - Aug 2024</div>
+							<div className="work-duration">Aug 2023 - Sept 2024</div>
+						</div>
+
+						<div className="work">
+							<img
+								src="./https://media.licdn.com/dms/image/v2/D560BAQHcjljZxofThQ/company-logo_200_200/company-logo_200_200/0/1684765352294/eetic_cet_logo?e=1733356800&v=beta&t=_2UKddvfo1X832gPiatRQ-9v1uOknSKnsRI5qJV4Yds"
+								alt="EETI CET"
+								className="work-image"
+							/>
+							<div className="work-title">EETI CET</div>
+							<div className="work-subtitle">
+								Design Head
+							</div>
+							<div className="work-duration">May 2023 - Aug 2024</div>
 						</div>
 					</div>
 				}
