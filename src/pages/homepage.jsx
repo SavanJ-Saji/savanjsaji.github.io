@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
+	faSquareXTwitter,
 	faGithub,
-	faStackOverflow,
+	faStaylinked,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -115,12 +115,12 @@ const Homepage = () => {
 
 						<div className="homepage-socials">
 							<a
-								href={INFO.socials.twitter}
+								href={INFO.socials.X}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faTwitter}
+									icon={faSquareXTwitter}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -135,12 +135,12 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.linktree}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faStackOverflow}
+									icon={faStaylinked}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -204,3 +204,4 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
