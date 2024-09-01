@@ -1,6 +1,56 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
+import useIntersectionObserver from "../hooks/useIntersectionObserver"; // Import the custom hook
 
-function article_1() {
+import NavBar from "../components/common/navBar";
+import Footer from "../components/common/footer";
+import Logo from "../components/common/logo";
+import AllProjects from "../components/projects/allProjects";
+
+import INFO from "../data/user";
+import SEO from "../data/seo";
+
+import "./styles/projects.css";
+
+const Projects = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
+	const currentSEO = SEO.find((item) => item.page === "projects");
+
+	// Use the custom hook
+	const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
+	return (
+		<React.Fragment>
+			<Helmet>
+				<title>{`Projects | ${INFO.main.title}`}</title>
+				<meta name="description" content={currentSEO.description} />
+				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
+			</Helmet>
+
+			<div className="page-content">
+				<NavBar />
+				<div className="content-wrapper">
+					<div ref={ref} className={`logo-container ${isVisible ? 'visible' : ''}`}>
+						<Logo />
+					</div>
+					<div className="projects-container">
+						<AllProjects />
+					</div>
+					<div className="page-footer">
+						<Footer />
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
+	);
+}
+
+// Remove the unused Article component
+
+const article_1 = () => {
 	return {
 		date: "7 May 2023",
 		title: "The Benefits of Cloud Computing",
@@ -35,25 +85,25 @@ function article_1() {
 					/>
 				</div>
 			</React.Fragment>
-		),
+		)
 	};
-}
+};
 
-function article_2() {
+const article_2 = () => {
 	return {
-	    title: "Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4",
-	    author: "Savan J Saji",
-	    link: "https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4",
-	    body: (
+		title: "Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4",
+		author: "Savan J Saji",
+		link: "https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4",
+		body: (
 		   <React.Fragment>
-			    <h1>Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4</h1>
-			    <p>Read the full article <a href="https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4">here</a>.</p>
+				<h1>Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4</h1>
+				<p>Read the full article <a href="https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4">here</a>.</p>
 		   </React.Fragment>
 		),
 	};
 }
 
-function article_3() {
+const article_3 = () => {
 	return {
 		date: "7 May 2023",
 		title: "Artificial Intelligence in Healthcare",
@@ -70,10 +120,10 @@ function article_3() {
 			<React.Fragment>
 				<h1>Content of article 2</h1>
 			</React.Fragment>
-		),
+		)
 	};
-}
+};
 
-const myArticles = [article_1, article_2, article_3];
+const myArticles = [Projects, article_1, article_2, article_3];
 
 export default myArticles;
