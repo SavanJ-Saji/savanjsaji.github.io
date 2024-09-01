@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
+	faSquareXTwitter,
 	faGithub,
 	faStaylinked,
 	faInstagram,
@@ -120,7 +120,7 @@ const Homepage = () => {
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faTwitter}
+									icon={faSquareXTwitter}
 									className="homepage-social-icon"
 								/>
 							</a>
