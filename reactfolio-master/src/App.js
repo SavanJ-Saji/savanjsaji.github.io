@@ -8,7 +8,7 @@ import ReadArticlePage from './pages/readArticle';
 import ContactPage from './pages/contact';
 import NotFoundPage from './pages/404';
 import Navbar from './components/common/navBar.jsx';
-import Toggle from './Toggle.js';
+import Toggle from './components/toggle';
 import { ThemeProvider, ThemeContext } from './theme-provider';
 import './global.css'; // Import global CSS
 
