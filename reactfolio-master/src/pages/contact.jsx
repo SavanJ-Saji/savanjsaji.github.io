@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import Socials from "../components/about/socials";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
-
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
@@ -44,10 +42,7 @@ const Contact = () => {
 						</div>
 
 						<div className="subtitle contact-subtitle">
-							Thank you for your interest in getting in touch with
-							me. I welcome your feedback, questions, and
-							suggestions. If you have a specific question or
-							comment, please feel free to email me directly at
+							I appreciate your interest in connecting!  Please feel free to reach out with any feedback, questions, or suggestions. For specific inquiries, you can email me directly at 
 							&nbsp;{" "}
 							<a href={`mailto:${INFO.main.email}`}>
 								{INFO.main.email}
@@ -59,17 +54,10 @@ const Contact = () => {
 							required fields and I'll get back to you as soon as
 							possible. Finally, if you prefer to connect on
 							social media, you can find me on{" "}
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{INFO.socials.instagram}
-							</a>
-							. I post regular updates and engage with my
-							followers there, so don't hesitate to reach out.
-							Thanks again for your interest, and I look forward
-							to hearing from you!
+							<a href={INFO.socials.linkedin} target="_blank" rel="noreferrer">
+                                LinkedIn
+                            </a>
+							. I'm available to answer your questions and provide information often. Please reach out to me directly if you have any. Thanks for your time!
 						</div>
 					</div>
 
@@ -89,3 +77,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
