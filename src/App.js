@@ -7,10 +7,13 @@ import ArticlesPage from './pages/articles';
 import ReadArticlePage from './pages/readArticle';
 import ContactPage from './pages/contact';
 import NotFoundPage from './pages/404';
+import Navbar from './components/Navbar'; // Added import statement
 
 function App() {
   return (
     <Router>
+      {/* Added Navbar component */}
+      <Navbar />
       <Routes>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />

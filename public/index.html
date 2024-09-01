@@ -7,8 +7,8 @@
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="/static/js/1.3aec9dfa.chunk.js"></script>
-    <script src="/static/js/main.72f93e60.chunk.js"></script>
+    <script src="%PUBLIC_URL%/static/js/1.3aec9dfa.chunk.js"></script>
+    <script src="%PUBLIC_URL%/static/js/main.72f93e60.chunk.js"></script>
     <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
     <script type="text/javascript">
@@ -18,20 +18,16 @@
         (function(l) {
             if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
-                    return s.replace(/~and~/g, '&')
+                    return s.replace(/~and~/g, '&');
                 }).join('?');
                 window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
+                    l.pathname.slice(0, -1) + decoded + l.hash);
             }
         }(window.location))
     </script>
-    <title>Savan-Reactfolio</title>
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- The core React script -->
-    <script src="%PUBLIC_URL%/static/js/bundle.js"></script>
 </body>
 </html>
