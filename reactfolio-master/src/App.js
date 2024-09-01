@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ReactGA from "react-ga4";
-import styled from "styled-components";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
 import Homepage from "./pages/homepage";
 import About from "./pages/about";
@@ -10,65 +10,47 @@ import Articles from "./pages/articles";
 import ReadArticle from "./pages/readArticle";
 import Contact from "./pages/contact";
 import Notfound from "./pages/404";
+import Navbar from "./components/Navbar"; // Import the Navbar component
 
 import { TRACKING_ID } from "./data/tracking";
 import "./app.css";
-import { ThemeProvider, ThemeContext } from "./theme-provider"; // Ensure the path is correct
+import { ThemeProvider, ThemeContext, themes } from "./src/theme-provider.js"; // Ensure the path is correct
 
 const DarkModeToggle = () => {
-  const isDarkMode = useContext(ThemeContext); // Define the 'isDarkMode' variable using the useContext hook
-  const toggleColorMode = () => {
-    // Implement the toggleColorMode function if needed
-  };
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <>
-      <DarkModeToggle />
-      <Container isDark={isDarkMode}>
-        <Main>null</Main>
-      </Container>
-      {/* Footer component */}
-      <button onClick={toggleColorMode}>
-        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      </button>
-    </>
+    <button onClick={toggleTheme}>
+      {theme === themes.light ? "Switch to Dark Mode" : "Switch to Light Mode"}
+    </button>
   );
 };
 
-export const Container = styled.div`
-  background-color: ${({ isDark }) => (isDark ? "#222" : "#fff")};
-`;
-
-export const Main = styled.main`
-  /* Add your styles for Main here */
-`;
-// Remove the duplicate import statement for 'React'
-// Remove the declaration of ToggleButton since it is not being used
-
-// Remove the duplicate declaration of DarkModeToggle
-
-function App() {
+const App = () => {
   useEffect(() => {
-    if (TRACKING_ID !== "") {
-      ReactGA.initialize(TRACKING_ID);
-    }
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send("pageview");
   }, []);
 
   return (
     <ThemeProvider>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/article/:slug" element={<ReadArticle />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Notfound />} />
-        </Routes>
-      </div>
+      <StyledThemeProvider theme={(theme) => theme}>
+        <Router>
+          <Navbar /> {/* Add the Navbar component */}
+          <DarkModeToggle /> {/* Add the DarkModeToggle component */}
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/article/:id" element={<ReadArticle />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Notfound />} />
+          </Routes>
+        </Router>
+      </StyledThemeProvider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
