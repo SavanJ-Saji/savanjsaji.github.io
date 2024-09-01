@@ -1,55 +1,62 @@
-import React, { useEffect, useContext } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ReactGA from "react-ga4";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import React, { useContext, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+// import { ThemeProvider } from '@material-ui/core/styles';
+import Navbar from './components/common/navBar.jsx';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ArticlesPage from './pages/ArticlesPage';
+import ReadArticlePage from './pages/ReadArticlePage';
+import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/404';
+import ThemeToggle from './components/Toggle';
+import { ThemeProvider as AppThemeProvider, ThemeContext } from './theme-provider';
+import './global.css'; // Import global CSS
+import styled from 'styled-components';
 
-import Homepage from "./pages/homepage";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Articles from "./pages/articles";
-import ReadArticle from "./pages/readArticle";
-import Contact from "./pages/contact";
-import Notfound from "./pages/404";
-import Navbar from "./components/Navbar"; // Import the Navbar component
+const Button = styled.button`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: white;
+`;
 
-import { TRACKING_ID } from "./data/tracking";
-import "./app.css";
-import { ThemeProvider, ThemeContext, themes } from "./src/theme-provider.js"; // Ensure the path is correct
+function MainComponent() {
+  return <Button>Click Me</Button>;
+}
 
-const DarkModeToggle = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+const AppContent = () => {
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = theme.background;
+    document.body.style.color = theme.color;
+  }, [theme]);
 
   return (
-    <button onClick={toggleTheme}>
-      {theme === themes.light ? "Switch to Dark Mode" : "Switch to Light Mode"}
-    </button>
+    <div className="content">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/article/:id" element={<ReadArticlePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
   );
 };
 
 const App = () => {
-  useEffect(() => {
-    ReactGA.initialize(TRACKING_ID);
-    ReactGA.send("pageview");
-  }, []);
-
   return (
-    <ThemeProvider>
-      <StyledThemeProvider theme={(theme) => theme}>
-        <Router>
-          <Navbar /> {/* Add the Navbar component */}
-          <DarkModeToggle /> {/* Add the DarkModeToggle component */}
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/article/:id" element={<ReadArticle />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Notfound />} />
-          </Routes>
-        </Router>
-      </StyledThemeProvider>
-    </ThemeProvider>
+    <AppThemeProvider>
+      <Router>
+        <Navbar />
+        <ThemeToggle />
+        <AppContent />
+        <MainComponent />
+      </Router>
+    </AppThemeProvider>
   );
 };
 
