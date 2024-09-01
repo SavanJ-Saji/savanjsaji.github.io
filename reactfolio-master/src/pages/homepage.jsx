@@ -51,8 +51,6 @@ const Homepage = () => {
 				setStayLogo(false);
 			}
 		};
-
-		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [logoSize, oldLogoSize]);
 
