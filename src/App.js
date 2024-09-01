@@ -7,7 +7,7 @@ import ArticlesPage from './pages/articles';
 import ReadArticlePage from './pages/readArticle';
 import ContactPage from './pages/contact';
 import NotFoundPage from './pages/404';
-import Navbar from './components/Navbar'; // Added import statement
+import Navbar from './components/common/navBar.jsx'; // Added import statement
 
 function App() {
   return (
@@ -15,13 +15,13 @@ function App() {
       {/* Added Navbar component */}
       <Navbar />
       <Routes>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route path="/projects" component={ProjectsPage} />
-        <Route path="/articles" component={ArticlesPage} />
-        <Route path="/article/:id" component={ReadArticlePage} />
-        <Route path="/contact" component={ContactPage} />
-        <Route component={NotFoundPage} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/article/:id" element={<ReadArticlePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
