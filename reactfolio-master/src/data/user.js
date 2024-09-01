@@ -23,8 +23,8 @@ const INFO = {
 
 	about: {
 		title: "I'm Savan J Saji.",
-		description: `I am currently a third-year undergraduate at the College of Engineering Trivandrum, where I am pursuing a Bachelor of Technology in Applied Electronics & Instrumentation.
-		I am constantly seeking new opportunities to learn and improve in the domains of web development, cyber security & embedded systems. In my leisure time, I enjoy staying up-to-date on advancements in the technology field. I am very motivated and committed to advancing both academically and professionally, and I am always looking for fresh challenges and chances to put what I have learned to work. As I progress through college and beyond, I am excited to keep learning and growing, and I am curious to see where my passion for technology and engineering may lead me.`,
+		description: `I am a third-year undergraduate at the College of Engineering Trivandrum, where I am pursuing a Bachelor of Technology in Applied Electronics & Instrumentation.
+		I am constantly seeking new opportunities to learn and improve in  web development, cyber security & embedded systems. In my leisure time, I enjoy staying up-to-date on advancements in the technology field. I am very motivated and committed to advancing academically and professionally, and I am always looking for fresh challenges and chances to put what I have learned to work. As I progress through college and beyond, I am excited to keep learning and growing, and I am curious to see where my passion for technology and engineering may lead me.`,
 	},
 
 	articles: {
@@ -44,7 +44,7 @@ const INFO = {
 		},
 
 		{
-			title: "Tic Tac Toe Game Using HTML,CSS And JavaScript",
+			title: "Tic Tac Toe Game Using HTML, CSS And JavaScript",
 			description:
 				"Challenge your friends to a game of Tic Tac Toe.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
@@ -53,9 +53,9 @@ const INFO = {
 		},
 
 		{
-			title: "JOKE GENERATOR USING HTML,CSS And Javascript",
+			title: "JOKE GENERATOR USING HTML, CSS And Javascript",
 			description:
-				"Add some humor to your day with a new joke every time you click.",
+				"Add some humour to your day with a new joke every time you click.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
 			linkText: "View Project",
 			link: "https://randomquotegeneratorfiles.on.drv.tw/www.Joke.com/Joke.html",
