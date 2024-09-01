@@ -1,7 +1,6 @@
 
 {
   "name": "savan-reactfolio",
-  "homepage": "https://www.savanjsaji.me/savan-reactfolio",
   "version": "1.1.0",
   "engines": {
     "node": ">=20.0.0"
