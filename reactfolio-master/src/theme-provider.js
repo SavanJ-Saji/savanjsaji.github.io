@@ -1,14 +1,13 @@
-import React, { createContext, useState } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import React, { createContext, useState } from 'react';
 
-export const themes = {
+const themes = {
   light: {
-    background: "#ffffff",
-    color: "#000000",
+    background: '#ffffff',
+    color: '#000000',
   },
   dark: {
-    background: "#000000",
-    color: "#ffffff",
+    background: '#000000',
+    color: '#ffffff',
   },
 };
 
@@ -28,7 +27,7 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>
+      {children}
     </ThemeContext.Provider>
   );
 };
