@@ -13,13 +13,13 @@ import {
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
+import Article from "../components/articles/article"; // Corrected import path
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
+import { default as myArticles } from "../data/articles"; // Ensure this is an array
 
 import "./styles/homepage.css";
 
@@ -51,6 +51,8 @@ const Homepage = () => {
 				setStayLogo(false);
 			}
 		};
+
+		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [logoSize, oldLogoSize]);
 
@@ -177,9 +179,9 @@ const Homepage = () => {
 									>
 										<Article
 											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
+											date={article.date}
+											title={article.title}
+											description={article.description}
 											link={"/article/" + (index + 1)}
 										/>
 									</div>
