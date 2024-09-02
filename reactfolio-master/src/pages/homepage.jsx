@@ -20,8 +20,10 @@ import AllProjects from "../components/projects/allProjects";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 import { default as myArticles } from "../data/articles"; // Ensure this is an array
+const myArticles = [article_1 ,article_2 ,article_3]; // Replace with your array of articles
 
 import "./styles/homepage.css";
+import { article_1, article_2, article_3 } from "../../data/articles";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
