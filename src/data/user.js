@@ -18,13 +18,13 @@ const INFO = {
 	homepage: {
 		title: "Turning Tech Dreams into Reality",
 		description:
-			"I'm Savan J Saji. Future engineer, pioneering tomorrow's innovations at College of Engineering Trivandrum.",
+			"I'm Savan J Saji. Future engineer, pioneering tomorrow's innovations at College of Engineering Trivandrum. I thrive on tackling complex problems and continuously expanding my technical knowledge.",
 	},
 
 	about: {
 		title: "I'm Savan J Saji.",
 		description: `I am a third-year undergraduate at the College of Engineering Trivandrum, where I am pursuing a Bachelor of Technology in Applied Electronics & Instrumentation.
-		I am constantly seeking new opportunities to learn and improve in web development, cyber security & embedded systems. In my leisure time, I enjoy staying up-to-date on advancements in the technology field. I am very motivated and committed to advancing academically and professionally, and I am always looking for fresh challenges and chances to put what I have learned to work. As I progress through college and beyond, I am excited to keep learning and growing, and I am curious to see where my passion for technology and engineering may lead me.`,
+		I constantly seek new opportunities to learn and improve in web development, cyber security & embedded systems. In my leisure time, I enjoy staying up-to-date on advancements in the technology field. I am very motivated and committed to advancing academically and professionally, and I am always looking for fresh challenges and chances to put what I have learned to work. As I progress through college and beyond, I am excited to keep learning and growing, and I am curious to see where my passion for technology and engineering may lead me.`,
 	},
 
 	articles: {
@@ -35,12 +35,12 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Random Quote Generator Using HTML, CSS & JavaScript",
 			description:
-				"Coming soon",
-			logo: "/https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Get a fresh perspective with a new quote every time you click the button.",
+			logo: "https://static.wixstatic.com/media/cbed17_d034840f87f34e93ba463891d40581af~mv2.png/v1/fill/w_583,h_305,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cbed17_d034840f87f34e93ba463891d40581af~mv2.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://randomquotegeneratorfiles.on.drv.tw/www.C%2B%2BATMProject.com/quote.html",
 		},
 
 		{
@@ -64,7 +64,7 @@ const INFO = {
 		{
 			title: "Project 4",
 			description:
-				"Not any time soon",
+				"That won't happen for a while.",
 			logo: "/https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://github.com",
