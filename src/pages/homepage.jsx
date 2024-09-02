@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react"; // Import the 'useRef' hook
 import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
@@ -28,6 +28,8 @@ const Homepage = () => {
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
 
+	const logoRef = useRef(null);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -56,6 +58,36 @@ const Homepage = () => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [logoSize, oldLogoSize]);
 
+	useEffect(() => {
+		const options = {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.5,
+		};
+
+		const handleIntersection = (entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setStayLogo(false);
+				} else {
+					setStayLogo(true);
+				}
+			});
+		};
+
+		const observer = new IntersectionObserver(handleIntersection, options);
+		const currentLogoRef = logoRef.current;
+		if (currentLogoRef) {
+			observer.observe(currentLogoRef);
+		}
+
+		return () => {
+			if (currentLogoRef) {
+				observer.unobserve(currentLogoRef);
+			}
+		};
+	}, []);
+
 	const currentSEO = SEO.find((item) => item.page === "home");
 
 	const logoStyle = {
@@ -83,7 +115,7 @@ const Homepage = () => {
 				<NavBar active="home" />
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
-						<div style={logoStyle}>
+						<div style={logoStyle} ref={logoRef}>
 							<Logo width={logoSize} link={false} />
 						</div>
 					</div>
@@ -204,4 +236,3 @@ const Homepage = () => {
 };
 
 export default Homepage;
-
