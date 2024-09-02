@@ -1,6 +1,6 @@
 # Reactfolio V1.2 👩🏽‍🚀
 
-Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professional and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
+Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. This platform offers a streamlined way for professionals to present their portfolio and highlight their skills and accomplishments engagingly and professionally. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
 
 <center>
 <img src="https://github.com/user-attachments/assets/ceb1da22-fa4e-4a7f-b82d-da3b08a31e07" alt="Reactfolio" />
@@ -8,7 +8,7 @@ Reactfolio is a modern and customizable personal portfolio web template built us
 
 Live demo here: <a href="savanjsaji.me" target="_blank">savanjsaji.me</a>
 <br/>
-Readme here: <a href="https://savan.dev/portfolio/reactfolio/" target="_blank">savan.dev/portfolio/reactfolio/</a>
+Readme here: <a href="https://savan.me" target="_blank">savan.dev/portfolio/reactfolio/</a>
 
 -   [Features](#-features)
 -   [Getting started](#-getting-started)
@@ -94,7 +94,7 @@ Directory: `/src/data/`
             			<React.Fragment>
             				<div className="article-content">
             					<div className="paragraph">
-            						Content of article 1
+            						Content of Article 1
             					</div>
             					<img
             						src="https://picsum.photos/200/300"
