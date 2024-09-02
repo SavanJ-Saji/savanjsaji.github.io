@@ -8,10 +8,9 @@ import AllProjects from "../components/projects/allProjects";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-// Remove the duplicate declaration of myArticles
+import myArticles from "../data/articles.js";
 
-
-const MyArticlesComponent = () => {
+const Article = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -47,7 +46,7 @@ const MyArticlesComponent = () => {
     );
 }
 
-const Article = ({ article }) => {
+const ArticleComponent = ({ article }) => {
     const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
     return (
@@ -135,5 +134,7 @@ const article_3 = () => {
     };
 };
 
-export {  Article, article_1, article_2, article_3, MyArticlesComponent };
+export {  Article, article_1, article_2, article_3, ArticleComponent };
+
+export default myArticles;
 
