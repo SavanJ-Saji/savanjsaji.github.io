@@ -15,7 +15,7 @@ const Works = () => {
 					<div className="works-body">
 						<div className="work">
 							<img
-								src="./https://media.licdn.com/dms/image/v2/C560BAQFkd_MVvfJ8SA/company-logo_200_200/company-logo_200_200/0/1630669608362/investorcet_logo?e=1733356800&v=beta&t=CbSpmb__vvzUQIIlZzkW__3Wg1ieEYqqnmw2IFHxOk8"
+								src="https://media.licdn.com/dms/image/v2/C560BAQFkd_MVvfJ8SA/company-logo_200_200/company-logo_200_200/0/1630669608362/investorcet_logo?e=1733356800&v=beta&t=CbSpmb__vvzUQIIlZzkW__3Wg1ieEYqqnmw2IFHxOk8"
 								alt="Investor CET"
 								className="work-image"
 							/>
@@ -28,7 +28,7 @@ const Works = () => {
 
 						<div className="work">
 							<img
-								src="./https://media.licdn.com/dms/image/v2/D560BAQGIlPRwI7g4iA/company-logo_200_200/company-logo_200_200/0/1696013280902?e=1733356800&v=beta&t=2gtEuIQLoheMZRqbX2mh-U_isPfSvOt76evdN4yVeFg"
+								src="https://media.licdn.com/dms/image/v2/D560BAQGIlPRwI7g4iA/company-logo_200_200/company-logo_200_200/0/1696013280902?e=1733356800&v=beta&t=2gtEuIQLoheMZRqbX2mh-U_isPfSvOt76evdN4yVeFg"
 								alt="EETIF"
 								className="work-image"
 							/>
@@ -41,7 +41,7 @@ const Works = () => {
 
 						<div className="work">
 							<img
-								src="./https://media.licdn.com/dms/image/v2/C560BAQExO-V_fo3ggg/company-logo_200_200/company-logo_200_200/0/1630604969837/robo_cet_logo?e=1733356800&v=beta&t=SAm968djxgefAHsstJIUg9ZEr1Hgd8ErUR-A-VhTK3Q"
+								src="https://media.licdn.com/dms/image/v2/C560BAQExO-V_fo3ggg/company-logo_200_200/company-logo_200_200/0/1630604969837/robo_cet_logo?e=1733356800&v=beta&t=SAm968djxgefAHsstJIUg9ZEr1Hgd8ErUR-A-VhTK3Q"
 								alt="RoboCET"
 								className="work-image"
 							/>
@@ -54,7 +54,7 @@ const Works = () => {
 
 						<div className="work">
 							<img
-								src="./https://media.licdn.com/dms/image/v2/D560BAQHcjljZxofThQ/company-logo_200_200/company-logo_200_200/0/1684765352294/eetic_cet_logo?e=1733356800&v=beta&t=_2UKddvfo1X832gPiatRQ-9v1uOknSKnsRI5qJV4Yds"
+								src="https://media.licdn.com/dms/image/v2/D560BAQHcjljZxofThQ/company-logo_200_200/company-logo_200_200/0/1684765352294/eetic_cet_logo?e=1733356800&v=beta&t=_2UKddvfo1X832gPiatRQ-9v1uOknSKnsRI5qJV4Yds"
 								alt="EETI CET"
 								className="work-image"
 							/>
