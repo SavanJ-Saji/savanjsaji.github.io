@@ -10,13 +10,17 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/projects.css";
+import useIntersectionObserver from "../useIntersectionObserver"; // Import the custom hook
 
 const Projects = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-	const currentSEO = SEO.find((item) => item.page === "projects");
+    const currentSEO = SEO.find((item) => item.page === "projects");
+
+	// Use the custom hook
+	useIntersectionObserver({ threshold: 0.1 });
 
 	return (
 		<React.Fragment>
@@ -39,11 +43,11 @@ const Projects = () => {
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							The things I've created to leave my mark on this universe.
+							Things I've made trying to leave a mark on the universe
 						</div>
 
 						<div className="subtitle projects-subtitle">
-							I've worked on several open-source projects and am excited to share them with the community. Feel free to explore the code, suggest improvements, and collaborate. I'm always open to new ideas and feedback. 
+							I'm passionate about open-source projects and have a history of contributing to various initiatives. Many of my past projects are publicly available for anyone to explore, contribute to, or even improve. I welcome collaboration and am always eager to receive feedback and new ideas.  
 						</div>
 
 						<div className="projects-list">
