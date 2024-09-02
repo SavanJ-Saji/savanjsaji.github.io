@@ -13,17 +13,13 @@ import {
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/articles/article"; // Corrected import path
+import Article from "../components/articles/article"; 
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
-
+import "./styles/homepage.css";
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import { default as myArticles } from "../data/articles"; // Ensure this is an array
-const myArticles = [article_1 ,article_2 ,article_3]; // Replace with your array of articles
-
-import "./styles/homepage.css";
-import { article_1, article_2, article_3 } from "../../data/articles";
+import myArticles from "../data/articles"; 
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
