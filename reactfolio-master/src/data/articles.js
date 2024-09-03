@@ -35,7 +35,7 @@ const Articles = () => {
 					<div ref={ref} className={`logo-container ${isVisible ? 'visible' : ''}`}>
 						<Logo />
 					</div>
-					<div className="projects-container">
+					<div className="articles-container">
 						<AllProjects />
 					</div>
 					<div className="page-footer">
