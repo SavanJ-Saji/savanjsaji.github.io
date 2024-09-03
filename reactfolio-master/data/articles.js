@@ -11,7 +11,7 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles.js";
 
 
-const MyArticlesComponent = () => {
+const Article = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -24,7 +24,7 @@ const MyArticlesComponent = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>{`Projects | ${INFO.main.title}`}</title>
+                <title>{`articles | ${INFO.main.title}`}</title>
                 <meta name="description" content={currentSEO.description} />
                 <meta name="keywords" content={currentSEO.keywords.join(", ")} />
             </Helmet>
@@ -35,7 +35,7 @@ const MyArticlesComponent = () => {
                     <div ref={ref} className={`logo-container ${isVisible ? 'visible' : ''}`}>
                         <Logo />
                     </div>
-                    <div className="projects-container">
+                    <div className="articles-container">
                         <AllProjects />
                     </div>
                     <div className="page-footer">
@@ -47,7 +47,7 @@ const MyArticlesComponent = () => {
     );
 }
 
-const Article = ({ article }) => {
+const MyArticlesComponent = ({ article }) => {
     const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
     return (
