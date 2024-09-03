@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useMemo } from 'react';
+import PropTypes from 'prop-types';
 
 const themes = {
   light: {
@@ -25,9 +26,15 @@ export const ThemeProvider = ({ children }) => {
     );
   };
 
+  const value = useMemo(() => ({ theme, toggleTheme }), [theme]);
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
+};
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
