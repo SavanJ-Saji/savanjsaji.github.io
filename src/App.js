@@ -1,16 +1,18 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/homepage';
-import AboutPage from './pages/about';
-import ProjectsPage from './pages/projects';
-import ArticlesPage from './pages/articles';
-import ReadArticlePage from './pages/readArticle';
-import ContactPage from './pages/contact';
-import NotFoundPage from './pages/404';
 import Navbar from './components/common/navBar.jsx';
 import Toggle from './Toggle.js';
 import { ThemeProvider, ThemeContext } from './theme-provider';
 import './global.css'; // Import global CSS
+
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/homepage'));
+const AboutPage = lazy(() => import('./pages/about'));
+const ProjectsPage = lazy(() => import('./pages/projects'));
+const ArticlesPage = lazy(() => import('./pages/articles'));
+const ReadArticlePage = lazy(() => import('./pages/readArticle'));
+const ContactPage = lazy(() => import('./pages/contact'));
+const NotFoundPage = lazy(() => import('./pages/404'));
 
 const AppContent = () => {
   const { theme } = useContext(ThemeContext);
@@ -27,15 +29,17 @@ const AppContent = () => {
 
   return (
     <div className="content">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/articles" element={<ArticlesPage />} />
-        <Route path="/article/:id" element={<ReadArticlePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/article/:id" element={<ReadArticlePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };
