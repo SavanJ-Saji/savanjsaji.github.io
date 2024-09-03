@@ -10,13 +10,13 @@ import AllProjects from "../components/projects/allProjects";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/projects.css";
+import "./styles/articles.css";
 const Articles = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "projects");
+	const currentSEO = SEO.find((item) => item.page === "articles");
 
 	// Use the custom hook
 	const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
@@ -24,7 +24,7 @@ const Articles = () => {
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{`Projects | ${INFO.main.title}`}</title>
+				<title>{`articles | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
 			</Helmet>
