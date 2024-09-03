@@ -18,11 +18,9 @@ import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
-import SEO from "../data/seo";
-const myArticles = [article_1 ,article_2 ,article_3]; 
+import SEO from "../data/seo"; 
 
-import "./styles/homepage.css";
-import { article_1, article_2, article_3 } from "../../data/articles";
+import "./styles/articles.css";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -35,7 +33,7 @@ const Homepage = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			let scroll = Math.round(window.pageYOffset, 2);
+			let scroll = Math.round(window.scrollY, 2);
 
 			let newLogoSize = 80 - (scroll * 4) / 10;
 
@@ -173,7 +171,7 @@ const Homepage = () => {
 
 						<div className="homepage-after-title">
 							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
+								{Article.map((article, index) => (
 									<div
 										className="homepage-article"
 										key={(index + 1).toString()}
