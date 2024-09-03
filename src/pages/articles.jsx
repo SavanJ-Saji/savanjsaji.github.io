@@ -50,20 +50,19 @@ const Articles = () => {
 
 						<div className="articles-container">
 							<div className="articles-wrapper">
-								{myArticles.map((article, index) => (
-									<div
-										className="articles-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
+								{myArticles.map((articleFn, index) => {
+									const article = articleFn();
+									return (
+										<div className="articles-article" key={index}>
+											<Article
+												date={article.date}
+												title={article.title}
+												description={article.description}
+												link={`/article/${index + 1}`}
+											/>
+										</div>
+									);
+								})}
 							</div>
 						</div>
 					</div>
