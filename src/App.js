@@ -12,6 +12,9 @@ import Toggle from './Toggle.js';
 import { ThemeProvider, ThemeContext } from './theme-provider';
 import './global.css';
 import { initGA, logPageView } from './analytics';
+import ReactGA from 'react-ga4'; // Import ReactGA for Google Analytics
+
+const TRACKING_ID = "SGPRFB92JG "; // Replace with your Google Analytics tracking ID
 
 const AppContent = () => {
   const { theme } = useContext(ThemeContext);
@@ -29,6 +32,7 @@ const AppContent = () => {
 
   useEffect(() => {
     logPageView();
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search }); // Log page view
   }, [location]);
 
   return (
@@ -49,6 +53,7 @@ const AppContent = () => {
 const App = () => {
   useEffect(() => {
     initGA();
+    ReactGA.initialize(TRACKING_ID); // Initialize Google Analytics
   }, []);
 
   return (
