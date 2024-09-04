@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initGA, logPageView } from './analytics';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import RootLayout from './layout'; // Import the RootLayout
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Route component={App} />
-    </Router>
+    <RootLayout>
+      <Router>
+        <Route component={App} />
+      </Router>
+    </RootLayout>
   </React.StrictMode>
 );
 
