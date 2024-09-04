@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import HomePage from './pages/homepage';
 import AboutPage from './pages/about';
 import ProjectsPage from './pages/projects';
@@ -11,11 +10,12 @@ import NotFoundPage from './pages/404';
 import Navbar from './components/common/navBar.jsx';
 import Toggle from './Toggle.js';
 import { ThemeProvider, ThemeContext } from './theme-provider';
-import './global.css'; 
-import RootLayout from './analytics.js'; 
+import './global.css';
+import { initGA, logPageView } from './analytics';
 
 const AppContent = () => {
   const { theme } = useContext(ThemeContext);
+  const location = useLocation();
 
   useEffect(() => {
     document.body.style.backgroundColor = theme.background;
@@ -26,6 +26,10 @@ const AppContent = () => {
       document.body.classList.remove('dark-mode');
     }
   }, [theme]);
+
+  useEffect(() => {
+    logPageView();
+  }, [location]);
 
   return (
     <div className="content">
@@ -43,19 +47,19 @@ const AppContent = () => {
 };
 
 const App = () => {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <ThemeProvider>
       <Router>
-       <RootLayout>
         <Navbar />
         <Toggle />
         <AppContent />
-        </RootLayout>
       </Router>
-      <SpeedInsights />
     </ThemeProvider>
   );
 };
 
 export default App;
-
