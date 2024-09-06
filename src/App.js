@@ -14,7 +14,7 @@ import './global.css';
 import { initGA, logPageView } from './analytics';
 import ReactGA from 'react-ga4'; // Import ReactGA for Google Analytics
 
-const TRACKING_ID = "SGPRFB92JG "; // Replace with your Google Analytics tracking ID
+const TRACKING_ID = "SGPRFB29JG"; // Update with your new Google Analytics tracking ID
 
 const AppContent = () => {
   const { theme } = useContext(ThemeContext);
@@ -52,7 +52,7 @@ const AppContent = () => {
 
 const App = () => {
   useEffect(() => {
-    initGA();
+    initGA(TRACKING_ID);
     ReactGA.initialize(TRACKING_ID); // Initialize Google Analytics
   }, []);
 
