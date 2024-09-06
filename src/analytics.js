@@ -1,12 +1,11 @@
-// analytics.js
 import ReactGA from 'react-ga4';
 
-export const initGA = (trackingID) => {
-    // Initialize Google Analytics
-    ReactGA.initialize(trackingID);
+const TRACKING_ID = "SGPRFB29JG"; // Replace with your Google Analytics tracking ID
+
+export const initGA = () => {
+  ReactGA.initialize(TRACKING_ID);
 };
 
 export const logPageView = () => {
-    // Log the page view
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search });
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search });
 };
