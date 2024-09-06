@@ -7,9 +7,12 @@ const ArticleComponent = ({ article }) => {
 
     return (
         <div ref={ref} className={`article ${isVisible ? 'visible' : ''}`}>
-            <h2>{article.title}</h           article <>{}</>}
-article &&>{}</>}
- {.body           .style>{}</        </div>
+            <h2>{article.title}</h2>
+            <p>{article.date}</p>
+            <p>{article.description}</p>
+            {article.body}
+            <style>{article.style}</style>
+        </div>
     );
 };
 
@@ -46,21 +49,20 @@ const articles = [
             <React.Fragment>
                 <div className="article-content">
                     <div className="paragraph">Content of article 1</div>
-                    <img src="https://picsum.photos/200/300" alt="random" className="randImage" />
+                    <img src="https://Image" />
                 </div>
             </React.Fragment>
         )
     },
     {
-        date: "7 May 2023", // Added date for consistency
+        date: "7 May 2023",
         title: "Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4",
-        description: "Exploring the limitless possibilities of OpenAI's ChatGPT and GPT-4.", // Added description for consistency
-        keywords: ["ChatGPT", "GPT-4", "OpenAI", "Savan", "Savan J", "Savan J Saji"], // Added keywords for consistency
+        description: "Exploring the limitless possibilities of OpenAI's ChatGPT and GPT-4.",
+        keywords: ["ChatGPT", "GPT-4", "OpenAI", "Savan", "Savan J", "Savan J Saji"],
         style: ``,
         body: (
             <React.Fragment>
-                <h1>Beyond Chatbots: Exploring the Limitless Possibilities of OpenAI's ChatGPT and GPT-4</h1>
-                <p>Read the full article <a href="https://brucewaynebatman77.wixsite.com/savan-j-saji/post/beyond-chatbots-exploring-the-limitless-possibilities-of-openai-s-chatgpt-and-gpt-4">here</a></p>
+                <h1>Beyond Chatbots: Exploring thept-4">here</a>.</p>
             </React.Fragment>
         ),
     },
