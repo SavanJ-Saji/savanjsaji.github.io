@@ -9,12 +9,14 @@ import Article from "../components/articles/article";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
+import { logPageView } from "../analytics"; // Import logPageView
 
 import "./styles/articles.css";
 
 const Articles = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		logPageView(); // Log page view
 	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "articles");
@@ -24,7 +26,10 @@ const Articles = () => {
 			<Helmet>
 				<title>{`Articles | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
-				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
+				<meta
+					name="keywords"
+					content={currentSEO.keywords.join(", ")}
+				/>
 			</Helmet>
 
 			<div className="page-content">
