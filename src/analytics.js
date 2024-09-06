@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import ReactGA from 'react-ga4';
 
 const TRACKING_ID = "SGPRFB29JG"; // Replace with your Google Analytics tracking ID
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <Analytics />
       </body>
     </html>
   );
