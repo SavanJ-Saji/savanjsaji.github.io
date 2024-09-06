@@ -19,23 +19,20 @@ const Projects = () => {
 
     const currentSEO = SEO.find((item) => item.page === "projects");
 
+    // Use the custom hook
+    const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
     // Check if currentSEO is defined
     if (!currentSEO) {
         return <div>SEO data not found</div>;
     }
-
-    // Use the custom hook
-    useIntersectionObserver({ threshold: 0.1 });
 
 	return (
 		<React.Fragment>
 			<Helmet>
 				<title>{`Projects | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<meta name="keywords" content={currentSEO.keywords.join(", ")} />
 			</Helmet>
 
 			<div className="page-content">
