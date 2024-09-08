@@ -9,6 +9,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import myArticles from "../data/articles.js";
+import RootLayout from './analytics';
 
 
 const Article = () => {
@@ -22,6 +23,7 @@ const Article = () => {
     const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
     return (
+      <RootLayout>
         <React.Fragment>
             <Helmet>
                 <title>{`articles | ${INFO.main.title}`}</title>
@@ -44,6 +46,7 @@ const Article = () => {
                 </div>
             </div>
         </React.Fragment>
+      </RootLayout>
     );
 }
 
