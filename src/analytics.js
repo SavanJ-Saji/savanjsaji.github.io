@@ -1,11 +1,18 @@
-import ReactGA from 'react-ga4';
+import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
-const TRACKING_ID = "SGPRFB29JG"; // Replace with your Google Analytics tracking ID
-
-export const initGA = () => {
-  ReactGA.initialize(TRACKING_ID);
+const RootLayout = ({ children }) => {
+  return (
+    <html lang="en">
+      <head>
+        <title>Next.js</title>
+      </head>
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
 };
 
-export const logPageView = () => {
-  ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search });
-};
+export default RootLayout;
