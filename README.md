@@ -1,6 +1,6 @@
 # Reactfolio V1.2 👩🏽‍🚀
 
-Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. This platform offers a streamlined way for professionals to present their portfolio and highlight their skills and accomplishments engagingly and professionally. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
+Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. This platform offers a streamlined way for professionals to present their portfolio and highlight their skills and accomplishments, engagingly and professionally. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
 
 <center>
 <img src="https://github.com/user-attachments/assets/ceb1da22-fa4e-4a7f-b82d-da3b08a31e07" alt="Reactfolio" />
@@ -55,7 +55,7 @@ The page will reload if you make edits.
 
 ## ⚙️ Configurations
 
-Since this is a public and open-source project, you can make any changes to it. If you are a ReactJS developer you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
+Since this is a public and open-source project, you can make any changes to it. If you are a ReactJS developer, you can do it easily. But if you are a beginner, I have extracted the configurable data into a single directory, so you can edit the files in that directory to configure the entire web application.
 
 Directory: `/src/data/`
 
@@ -184,13 +184,13 @@ Here are the steps to follow:
     scp -r build/* user@example.com:/var/www/html
     ```
 
-4. Your portfolio app should now be accessible from your server's domain name. You can verify this by opening a web browser and navigating to http://example.com (replace example.com with your server's domain name).
+4. Your portfolio app should now be accessible from your server's domain name. You can verify this by opening a web browser and navigating to http://savanjsaji.me 
 
-That's it! Your React portfolio app should now be up and running on your server. Note that you may need to configure your server's web server (e.g., Apache or Nginx) to serve the index.html file in the build/ directory as the default page for your domain.
+That's it! Your React portfolio app should now be up and running on your server. Just so you know, you may need to configure your server's web server (e.g., Apache or Nginx) to serve the index.html file in the build/ directory as the default page for your domain.
 
 ## 🤔 FAQ
 
-**Q1. Subpages can only be accessed through links on the homepage or navigation bar, but those pages are not accessible through direct links.**
+**Q1. Subpages can only be accessed through links on the homepage or navigation bar, but those pages are inaccessible through direct links.**
 
 If you are using Apache as your web server, you can insert this into your .htaccess file:
 
